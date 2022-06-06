@@ -1,17 +1,11 @@
 <script>
-  import Home from "./pages/Home.svelte";
+
+import Router from './Router.svelte'
 </script>
 
-<main>
-  <Home />
-</main>
+  <main>
+    <Router />
+  </main>
 
 <style>
-  :root {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-
-
-
 </style>
