@@ -6,7 +6,6 @@
   import Header from "./components/Header.svelte";
 </script>
 
-
 <Router>
     <Header />
     <Route path="/" component={Home} />
