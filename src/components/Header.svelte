@@ -3,36 +3,42 @@
   import { Link } from "svelte-navigator";
   import logoSrc from '../images/logo.png'
   import { useNavigate } from "svelte-navigator";
-
+  import MenuHeader from "./MenuHeader.svelte";
 	const navigate = useNavigate();
 
   let isLogin = false
 </script>
 
 <nav>
+  <div class="SearchBox">
+    <input type="search" placeholder="search"/>
+    <button>🔎</button>
+  </div>
   <div class="logoBox" on:click={() => navigate('/')}>
+    <h1>Green</h1>
     <img src ={logoSrc} alt="Green Plant Logo" />
-    <h1>GREEN</h1>
+    <h1>Develop</h1>
   </div>
   <ul>
     <li><Link to="/">Home</Link></li>
     {#if !isLogin} 
       <li><Link to="/login">Login</Link></li>
-      <li><Link to="/signup">SignUp</Link></li>
+      <li><Link to="/signup">Signup</Link></li>
     {:else} 
-      <li><a>UserInfo</a></li>
+      <li><a href="/">UserInfo</a></li>
       <li><Link to="">LogOut</Link></li>
     {/if}
-  
   </ul>
 </nav>
-
+<MenuHeader />
 
 <style lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap');
   .logoBox {
+    font-family: 'Josefin Sans', sans-serif;
     cursor: pointer;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     img {
       width: 5rem;
@@ -42,6 +48,28 @@
     h1 {
       color: green;
     }
+  }
+
+  .SearchBox {
+    margin-left: 1rem;
+    display: flex;
+    input {
+      height: 2.5rem;
+      border: solid 1px Green;
+      border-radius: 1rem 0 0.1rem 1rem;
+      padding-left: 1rem;
+      width: 20rem;
+    }
+
+    button {
+      display: block;
+      height: 2.5rem;
+      cursor: pointer;
+      background-color: rgb(39, 150, 89);
+      border: none;
+    }
+
+    
   }
   li > :global(a) {
         text-decoration: none;
