@@ -1,3 +1,5 @@
 <script>
-  import Header from "../components/Header.svelte";
+ 
 </script>
+
+<h1>Home Page</h1>
