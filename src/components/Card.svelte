@@ -1,4 +1,3 @@
-
 <script>
   export let name;
   export let img
@@ -7,16 +6,23 @@
 </script>
 
 <div class="CardContainer">
+  <img src={img} alt="">
   <h1>{name}</h1>
+  <h1>{price}</h1>
+  <h1>{content}</h1>
 </div>
 
 <style lang="scss">
   .CardContainer {
     border-radius: 3rem;
-    width: 35rem;
-    height: 35rem;
-    -webkit-box-shadow: -1px 0px 45px -8px rgba(0,0,0,0.16);
-    -moz-box-shadow: -1px 0px 45px -8px rgba(0,0,0,0.16);
-    box-shadow: -1px 0px 45px -8px rgba(0,0,0,0.16);
+    height: 45rem;
+    -webkit-box-shadow: 6px 18px 52px -8px rgba(237,237,237,1);
+  -moz-box-shadow: 6px 18px 52px -8px rgba(237,237,237,1);
+  box-shadow: 6px 18px 52px -8px rgba(237,237,237,1);
+
+  img {
+    width: 40rem;
+    height: 30rem;
+  }
   }
 </style>
