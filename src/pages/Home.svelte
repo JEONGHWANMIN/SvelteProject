@@ -4,17 +4,37 @@
  import Banners3 from '../images/banners/banners3.jpg'
  import Card from '../components/Card.svelte'
  import {dummys} from '../dummys/dummys'
- let Banners = [Banners1 ,Banners2,Banners3]
- let num = 0
- setInterval(() => {
-   if (num === 2) num = 0
-   else  num = num + 1
- }, 3000);
+ 
+let BannerNum = 0
+setInterval(() => {
+  BannerNum === 4 ? BannerNum = 1 : BannerNum++
+  
+}, 4000);
+
+
+
  </script>
 
-<div class="BannersBox">
-  <img src={Banners[num]} alt="Shopa">
+<div class="hidden">
+  <div class="BannersBox" style={BannerNum === 1 ? 'transform: translate(0vw)' : BannerNum === 2 ? 'transform: translate(-100vw)' : 'transform: translate(-200vw)'}>
+    <div class="innerBox">
+      <img src={Banners1} alt="Shopa">
+    </div>
+    <div class="innerBox">
+      <img src={Banners2} alt="Shopa">
+    </div>
+    <div class="innerBox">
+      <img src={Banners3} alt="Shopa">
+    </div>
+  </div>
+  <div class="banner-btns">
+    <button class="banner-btn" on:click={() => BannerNum = 1}></button>
+    <button class="banner-btn" on:click={() => BannerNum = 2}></button>
+    <button class="banner-btn" on:click={() => BannerNum = 3}></button>
+  </div>
 </div>
+
+
 
 <div class="CardContainer">
   {#each dummys.slice(0,3) as dummy}
@@ -24,17 +44,41 @@
 
 
 <style lang="scss">
+  
+  .hidden {
+    overflow: hidden;
+    position: relative;
+  }
   .BannersBox {
-    transition-delay: 10s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
+    transition: transform 2s;
+    width: 300vw;
     margin: auto;
     background-color: lightgrey;
+
+    .innerBox {
+      width: 100vw;
+      float: left;
+    }
     img {
+      width: 100%;
       height: 50rem;
     }
+  }
+
+  .banner-btns {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .banner-btn {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    margin: 1rem;
+    cursor: pointer;
   }
 
   .CardContainer {
