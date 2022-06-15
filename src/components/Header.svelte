@@ -33,13 +33,16 @@
 <MenuHeader />
 
 <style lang="scss">
+
   @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
   .logoBox {
     font-family: 'Josefin Sans', sans-serif;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 8rem;
     img {
       width: 5rem;
       height: 4rem;
@@ -53,6 +56,7 @@
   .SearchBox {
     margin-left: 1rem;
     display: flex;
+    
     input {
       height: 2.5rem;
       border: solid 1px Green;
@@ -67,13 +71,17 @@
       cursor: pointer;
       background-color: rgb(39, 150, 89);
       border: none;
+      width: 2.3rem;
     }
 
     
   }
+
   li > :global(a) {
         text-decoration: none;
         color: #444;
+        font-family: 'Source Sans Pro', sans-serif;
+
     }
   nav{
     width: 100%;

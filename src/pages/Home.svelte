@@ -43,6 +43,7 @@ setInterval(() => {
 </div>
 
 
+
 <style lang="scss">
   
   .hidden {
@@ -50,7 +51,7 @@ setInterval(() => {
     position: relative;
   }
   .BannersBox {
-    transition: transform 2s;
+    transition: transform 1.75s;
     width: 300vw;
     margin: auto;
     background-color: lightgrey;
@@ -61,7 +62,7 @@ setInterval(() => {
     }
     img {
       width: 100%;
-      height: 50rem;
+      height: 40rem;
     }
   }
 

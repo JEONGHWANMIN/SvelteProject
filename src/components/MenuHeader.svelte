@@ -22,7 +22,7 @@
     font-family: 'Inconsolata', monospace;
     font-size: 1.5rem;
     color: #555;
-
+    height: 6rem;
 /* ul , li */
     ul {
       display: flex;
