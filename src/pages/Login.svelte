@@ -1,6 +1,5 @@
 <script>
-  import BGsrc from '../images/signBG.png' 
-  import Loginsrc from '../images/Login.png' 
+  import Loginsrc from '../images/Login.png';
 </script>
 
 <div class="Container">
@@ -14,11 +13,11 @@
     </div>
     <form class="LoginForm">
       <div class="inputBox">
-        <input type="text" required={true} autocomplete={'off'}>
+        <input type="text" required={true} autocomplete={'off'} />
         <span>Email</span>
       </div>
       <div class="inputBox">
-        <input type="password" required={true} autocomplete="off">
+        <input type="password" required={true} autocomplete="off" />
         <span>Password</span>
       </div>
       <button>Login</button>
@@ -26,13 +25,12 @@
   </div>
 </div>
 
-
-
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
   .Container {
-    display : flex;
+    display: flex;
     width: 100vw;
     min-height: 100vh;
   }
@@ -42,20 +40,20 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+
     .TextBox {
       display: flex;
       flex-direction: column;
       align-items: center;
       background-color: green;
       width: 100%;
+
       h1 {
         padding-top: 4rem;
         color: white;
         font-size: 4rem;
         margin: 0;
         font-family: 'Secular One', sans-serif;
-        
       }
 
       p {
@@ -84,7 +82,7 @@
         width: 35rem;
         margin: 1rem 0;
       }
-      
+
       .inputBox input {
         width: 100%;
         height: 4rem;
@@ -98,10 +96,10 @@
       .inputBox span {
         position: absolute;
         pointer-events: none;
-        left : 0;
+        left: 0;
         top: 0;
         transform: translateY(30%);
-        padding : 0.2rem;
+        padding: 0.2rem;
         font-size: 1.5rem;
         margin-left: 2rem;
         padding: 0.5rem;
@@ -109,18 +107,18 @@
         color: #555;
       }
 
-      .inputBox input:valid ~ span ,
+      .inputBox input:valid ~ span,
       .inputBox input:focus ~ span {
         color: green;
         transform: translateY(-1.5rem);
         background-color: white;
       }
 
-      .inputBox input:valid ,
-      .inputBox input:focus  {
+      .inputBox input:valid,
+      .inputBox input:focus {
         border: solid 2px green;
       }
-      
+
       button {
         width: 100%;
         height: 3.5rem;
@@ -132,16 +130,5 @@
         cursor: pointer;
       }
     }
-    }
-    /* 미디어 쿼리 */
-    /* @media all and (max-width: 768px) {
-    .left-display {
-      display: none;
-    }
-    .right-display {
-      width: 100%;
-    }
-  } */
-
-
+  }
 </style>
