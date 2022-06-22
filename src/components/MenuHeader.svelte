@@ -1,12 +1,10 @@
-
-
 <div class="MenuBar">
   <ul>
     <li>Monitor</li>
     <li>Mouse</li>
     <li>Chair</li>
     <li>LabTop</li>
-    <li>Mug Cup</li>
+    <li>MugCup</li>
     <li>Earphone</li>
     <li>LabTop Stand</li>
     <li>Tea</li>
@@ -23,7 +21,7 @@
     font-size: 1.5rem;
     color: #555;
     height: 6rem;
-/* ul , li */
+    /* ul , li */
     ul {
       display: flex;
       li {
