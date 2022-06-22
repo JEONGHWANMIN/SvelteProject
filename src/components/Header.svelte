@@ -1,30 +1,30 @@
 <script>
-// @ts-nocheck
-  import { Link } from "svelte-navigator";
-  import logoSrc from '../images/logo.png'
-  import { useNavigate } from "svelte-navigator";
-  import MenuHeader from "./MenuHeader.svelte";
-	const navigate = useNavigate();
+  // @ts-nocheck
+  import { Link } from 'svelte-navigator';
+  import logoSrc from '../images/logo.png';
+  import { useNavigate } from 'svelte-navigator';
+  import MenuHeader from './MenuHeader.svelte';
+  const navigate = useNavigate();
 
-  let isLogin = false
+  let isLogin = false;
 </script>
 
 <nav>
   <div class="SearchBox">
-    <input type="search" placeholder="search"/>
+    <input type="search" placeholder="search" />
     <button>🔎</button>
   </div>
   <div class="logoBox" on:click={() => navigate('/')}>
     <h1>Green</h1>
-    <img src ={logoSrc} alt="Green Plant Logo" />
+    <img src={logoSrc} alt="Green Plant Logo" />
     <h1>Develop</h1>
   </div>
   <ul>
     <li><Link to="/">Home</Link></li>
-    {#if !isLogin} 
+    {#if !isLogin}
       <li><Link to="/login">Login</Link></li>
       <li><Link to="/signup">Signup</Link></li>
-    {:else} 
+    {:else}
       <li><a href="/">UserInfo</a></li>
       <li><Link to="">LogOut</Link></li>
     {/if}
@@ -33,7 +33,6 @@
 <MenuHeader />
 
 <style lang="scss">
-
   @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
   .logoBox {
@@ -56,7 +55,7 @@
   .SearchBox {
     margin-left: 1rem;
     display: flex;
-    
+
     input {
       height: 2.5rem;
       border: solid 1px Green;
@@ -73,17 +72,14 @@
       border: none;
       width: 2.3rem;
     }
-
-    
   }
 
   li > :global(a) {
-        text-decoration: none;
-        color: #444;
-        font-family: 'Source Sans Pro', sans-serif;
-
-    }
-  nav{
+    text-decoration: none;
+    color: #444;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  nav {
     width: 100%;
     height: 100%;
     background-color: rgb(244, 241, 241);
@@ -99,6 +95,5 @@
         margin: 1rem;
       }
     }
-
   }
 </style>
