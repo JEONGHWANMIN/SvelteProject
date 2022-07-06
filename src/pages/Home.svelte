@@ -42,10 +42,11 @@
   </div>
 </div>
 
-<!-- Products -->
+<!-- Best 3 Products -->
 <div class="CardContainer">
   {#each dummys.slice(0, 3) as dummy}
     <Card
+      category={dummy.category}
       name={dummy.name}
       price={dummy.price}
       img={dummy.img}
@@ -55,6 +56,14 @@
 </div>
 
 <style lang="scss">
+  .CardContainer {
+    display: flex;
+    width: 130rem;
+    margin: 2rem auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .hidden {
     overflow: hidden;
     position: relative;
@@ -89,12 +98,5 @@
     border: none;
     margin: 1rem;
     cursor: pointer;
-  }
-
-  .CardContainer {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
   }
 </style>
