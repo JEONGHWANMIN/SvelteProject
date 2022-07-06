@@ -9,5 +9,6 @@ const apiClient = axios.create({
 // @Route : /products
 export async function getProduct() {
   const response = await apiClient.get('/products');
+  console.log(response.data);
   return response.data;
 }
