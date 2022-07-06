@@ -28,6 +28,7 @@
       <li><a href="/">UserInfo</a></li>
       <li><Link to="">LogOut</Link></li>
     {/if}
+    <li><Link to="">Cart</Link></li>
   </ul>
 </nav>
 <MenuHeader />
